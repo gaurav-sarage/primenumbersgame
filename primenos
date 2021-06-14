@@ -1,0 +1,23 @@
+#ask the user for lower value 
+lower = int(input(" Please enter the lower value: "))
+
+#ask the user for upper value 
+upper = int(input(" Please enter the upper value: "))
+
+#use for loop to proceed, set count to 0
+for number in range (lower, upper + 1):
+    count = 0
+    for i in range(2, (number//2 + 1)):
+        if(number % i == 0):
+            count = count + 1
+            break
+#check the conditions to obtain prime number
+    if (count == 0 and number != 1):
+        print(" %d" %number, end = '  ')
+        
+"""
+Output:
+Please enter the lower value: 10
+ Please enter the upper value: 50
+ 11   13   17   19   23   29   31   37   41   43   47  
+"""
